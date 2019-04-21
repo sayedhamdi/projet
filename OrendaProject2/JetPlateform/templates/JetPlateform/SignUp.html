@@ -1,0 +1,32 @@
+{%extends 'JetPlateform/Base.html'%}
+
+<!-- title block -->
+  {%block title%}
+    Sign up
+  {%endblock%}
+<!-- title block ends -->
+
+
+<!-- Navbar block  starts-->
+  {%block navbar%}
+
+  {%endblock%}
+<!-- Navbar block ends -->
+
+
+<!-- body block  starts-->
+  {%block body%}
+  <h1>form sign Up</h1>
+  <form method="POST" action="{% url 'signUp' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+  </form>
+  {%endblock%}
+<!-- body block ends -->
+
+<!-- footer block  starts-->
+  {%block footer%}
+
+  {%endblock%}
+<!-- footer block ends -->

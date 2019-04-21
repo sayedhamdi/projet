@@ -1,0 +1,34 @@
+{%extends 'JetPlateform/Base.html'%}
+
+<!-- title block -->
+  {%block title%}
+
+  {%endblock%}
+<!-- title block ends -->
+
+
+<!-- Navbar block  starts-->
+  {%block navbar%}
+
+  {%endblock%}
+<!-- Navbar block ends -->
+
+
+<!-- body block  starts-->
+  {%block body%}
+  {%if condidature%}
+    {{condidture.etablissement}}
+  {%endif%}
+  <form action="{%url 'condidature' %}" method="POST">
+    {%csrf_token%}
+    {{ form.as_p }}
+    <button type="submit">submit</button>
+  </form>
+  {%endblock%}
+<!-- body block ends -->
+
+<!-- footer block  starts-->
+  {%block footer%}
+
+  {%endblock%}
+<!-- footer block ends -->

@@ -1,0 +1,36 @@
+{%extends 'JetPlateform/Base.html'%}
+
+<!-- title block -->
+{%block title%}
+
+{%endblock%}
+<!-- title block ends -->
+
+
+<!-- Navbar block  starts-->
+  {%block navbar%}
+
+  {%endblock%}
+<!-- Navbar block ends -->
+
+
+<!-- body block  starts-->
+{%block body%}
+  {%if message%}
+    {{message}}
+  {%endif%}
+<h1>form sign in</h1>
+<form method="POST" action="{% url 'signIn' %}">
+  {% csrf_token %}
+  <input type="text" name="email" placeholder = "put ur email"/>
+  <input type="password" name="password" placeholder = "put ur password"/>
+  <button type="submit">Sign in</button>
+</form>
+{%endblock%}
+<!-- body block ends -->
+
+<!-- footer block  starts-->
+  {%block footer%}
+
+  {%endblock%}
+<!-- footer block ends -->
