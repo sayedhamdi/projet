@@ -17,7 +17,9 @@
 <!-- body block  starts-->
   {%block body%}
   {%if condidature%}
-    {{condidture.etablissement}}
+  {%for c in condidature%}
+    {{c}}<br>
+    {%endfor%}
   {%endif%}
   <form action="{%url 'condidature' %}" method="POST">
     {%csrf_token%}

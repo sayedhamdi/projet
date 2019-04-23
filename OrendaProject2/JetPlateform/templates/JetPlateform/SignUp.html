@@ -17,7 +17,7 @@
 <!-- body block  starts-->
   {%block body%}
   <h1>form sign Up</h1>
-  <form method="POST" action="{% url 'signUp' %}">
+  <form method="POST" action="{% url 'emailSignUp' %}">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Sign up</button>

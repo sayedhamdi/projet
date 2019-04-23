@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'tkdsayed@gmail.com'
+EMAIL_HOST_PASSWORD = 'fiftycent1Ag03994'
+EMAIL_PORT = 587
 
 # Application definition
 
@@ -123,3 +128,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'JetPlateform.CustomUser'
+
+
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+MEDIA_URL='/media/'

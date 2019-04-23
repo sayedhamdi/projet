@@ -7,11 +7,30 @@
 <!-- title block ends -->
 
 
-<!-- Navbar block  starts-->
-  {%block navbar%}
-    {{user}}
-  {%endblock%}
-<!-- Navbar block ends -->
+
+
+{%block navbar%}
+{%if user.is_authenticated%}
+<li class="nav-item">
+  <a class="nav-link" href="#">Infosession</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="#">Condidature</a>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{user.username}}</a>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Condidature Status</a>
+    <a class="dropdown-item" href="#">Profile</a>
+    <a class="dropdown" href="{%url 'logout'%}">Logout</a>
+  </div>
+</li>
+{%endif%}
+{%endblock%}
+
+
+
+
 
 
 <!-- body block  starts-->
